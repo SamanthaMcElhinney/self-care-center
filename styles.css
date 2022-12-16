@@ -6,3 +6,100 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+      body {
+        background: linear-gradient(#134d71, #78a7c6,#f7e4bf );
+        height:100vh;
+        align-items: center;
+      }
+
+      header {
+        text-align: center;
+        font-family: 'Quicksand', sans-serif;
+        color: #ffffff;
+        font-weight: 200;
+        padding-bottom: 50px;
+      }
+
+      h3{
+        text-align: center;
+        font-family: 'Quicksand';
+        color:  #ffffff;
+        font: weight 100px; 
+        margin-bottom: 3px;
+      }
+
+      .Affiration-Mantra-Box {
+        margin: auto;
+        background-color: #ffffff;
+        border-radius:10px 10px 10px 10px; 
+        padding: 15px 15px; 
+        margin-bottom: 100px;
+        width: 400px;
+        height: 75px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        font-family: 'Quicksand';
+      }
+
+      .radio-button-box {
+        display: flex;
+        justify-content: space-evenly; 
+      }
+
+      #button1-Affirmation {
+        font-family: 'Quicksand';
+        float: right;
+        padding-right:70px
+      }
+
+      .radio1{
+        padding-right: 70px;
+      }
+
+      .radio2 {
+        font-family: 'Quicksand';
+        float: left;
+        padding-right: 70px;
+      }
+
+      #button2-Mantra {
+        font-family: 'Quicksand';
+        float: left;
+        padding-right:70px;
+      }
+  
+      #receive-message-Butn { 
+        background-color: #134d71;
+        font-family: 'Quicksand';
+        color: #ffffff;
+        margin-left: 125px;
+        border-radius:5px 5px 5px 5px;
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: baseline
+      } 
+
+      .Meditation-box {
+        margin:auto;
+        margin-top: 90px;
+        background-color: #ffffff;
+        border-radius:10px 10px 10px 10px;
+        width: 600px;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center; 
+        align-items:center;
+      }
+
+      img {
+        margin: 0 auto;
+        display: inline;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        width: 50px;
+        height: 50px;
+      }
