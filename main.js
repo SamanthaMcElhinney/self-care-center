@@ -10,8 +10,8 @@ var affirmations = [
 "I deserve to be healthy and feel good.",
 "I am full of energy and vitality and my mind is calm and peaceful.",
 "Every day I am getting healthier and stronger.",
-"I honor my body by trusting the signals that it sends me."
-"I manifest perfect health by making smart choices."
+"I honor my body by trusting the signals that it sends me.",
+"I manifest perfect health by making smart choices.",
 ]
 var mantras = [
 "Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.",
@@ -29,23 +29,44 @@ var mantras = [
 "The only constant is change.",
 ]
 
+var buttonAfirmation = document.querySelector('#button1-Affirmation')
+var buttonMantra = document.querySelector('#button2-Mantra')
+var buttonReceiveMessage= document.querySelector('#receive-message-Butn')
+var displayMessage = document.querySelector('.Meditation-box')
+var buddhaIcon = document.querySelector('#Buddha')
+var randomMantra = mantras[Math.floor(Math.random() * mantras.length)]
+var randomAffirmation = affirmations[Math.floor(Math.random() * affirmations.length)]
 
-
-
-var buttonAfirmation = document.querySelector(#button1-Affirmation)
-var buttonMantra = document.querySelector(#button2-Mantra)
-var buttonReceiveMessage= document.querySelector(#receive-message-Butn)
-var
-var
-
-window.addEventListener('click', selectAffirmationButton)
-window.addEventListener('click', selectMantraButton)
-window.addEventListener('click', selectReceiveMessage)
+// buttonAfirmation.addEventListener("click", selectAffirmationButton);
+// buttonMantra.addEventListener("click", selectMantraButton);
+buttonReceiveMessage.addEventListener("click", selectReceiveMessage);
+// buttonAfirmation.addEventListener('click', addMessage)
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
-function selectAffirmationButton() {
+// function selectAffirmationButton(){
+//     return displayMessage.innerText = affirmations[Math.floor(Math.random() * affirmations.length)];
+// }
 
+// function selectMantraButton(){
+//     return (displayMessage.innerText =
+//       mantras[Math.floor(Math.random() * mantras.length)]);
+// }
+
+// function selectReceiveMessage(){
+//     console.log('hiiiiiii')
+// }
+ 
+function selectReceiveMessage(event){
+    event.preventDefault();
+  if (buttonAfirmation.checked) {
+    displayMessage.innerText =
+      affirmations[Math.floor(Math.random() * affirmations.length)];
+      buttonAffirmation.checked === false
+  } else if (buttonMantra.checked) {
+        displayMessage.innerText =
+      affirmations[Math.floor(Math.random() * affirmations.length)];
+  }
 }
