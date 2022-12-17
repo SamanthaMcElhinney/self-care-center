@@ -12,6 +12,10 @@ black - #000000;
         align-items: center;
       }
 
+      .hidden {
+        visibility: hidden;
+      }
+
       header {
         text-align: center;
         font-family: 'Quicksand', sans-serif;
@@ -43,9 +47,7 @@ black - #000000;
       }
 
       input[type=radio], input[type=checkbox] {
-        transform:scale(2);
-        
-
+        transform:scale(1);
       }
 
       .radio-button-box {
@@ -109,3 +111,27 @@ black - #000000;
         width: 50px;
         height: 50px;
       }
+
+      #heartImg{
+        margin-top:-800px;
+        margin-left:250px;
+        margin-bottom:30px
+      }
+
+      .parent {
+        background-color: #78a7c6;
+        width:100px;
+        height:100px;
+        justify-content: center;
+        align-items:center;
+      }
+
+    
+      /* label {
+        width: 25px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        padding:10px 15px 10 px 10 px;
+        cursor:pointer;
+      } */
