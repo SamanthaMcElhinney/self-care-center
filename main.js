@@ -62,9 +62,10 @@ function getRandomIndex(array) {
 function selectReceiveMessage(event){
     event.preventDefault();
   if (buttonAfirmation.checked) {
+    buttonMantra.checked = false
     displayMessage.innerText =
       affirmations[Math.floor(Math.random() * affirmations.length)];
-      buttonAffirmation.checked === false
+     
   } else if (buttonMantra.checked) {
         displayMessage.innerText =
       affirmations[Math.floor(Math.random() * affirmations.length)];

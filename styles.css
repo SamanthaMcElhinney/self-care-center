@@ -42,6 +42,12 @@ black - #000000;
         font-family: 'Quicksand';
       }
 
+      input[type=radio], input[type=checkbox] {
+        transform:scale(2);
+        
+
+      }
+
       .radio-button-box {
         display: flex;
         justify-content: space-evenly; 
