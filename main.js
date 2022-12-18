@@ -28,7 +28,7 @@ var mantras = [
 "Yesterday is not today.",
 "The only constant is change.",
 ]
-
+var homeView= document.querySelector('.main-screen')
 var buttonAfirmation = document.querySelector('#button1-Affirmation')
 var buttonMantra = document.querySelector('#button2-Mantra')
 var buttonReceiveMessage= document.querySelector('#receive-message-Butn')
@@ -36,9 +36,11 @@ var displayMessage = document.querySelector('.Meditation-box')
 var buddhaIcon = document.querySelector('#Buddha')
 var randomMantra = mantras[Math.floor(Math.random() * mantras.length)]
 var randomAffirmation = affirmations[Math.floor(Math.random() * affirmations.length)]
-var viewFavoriteMessagesPage = document.querySelector('.viewfavorites')
+var viewFavoriteControls = document.querySelector('.viewfavorites')
 var buttonViewFavorites = document.querySelector(".favorites-button")
 var heartIcon = document.querySelector('.heart')
+var favoriteMessageContainer = document.querySelector('#favorite-message-container')
+var favoriteMessageBox = document.querySelector(".favorite-message-box");
 
 var favoriteMessages = [];
 
@@ -50,32 +52,35 @@ function displayRandomMessage(array) {
   return Math.floor(Math.random() * array.length);
 }
 
-function displayPage(){
-    return heartIcon.classList.add("hidden")
-}
-
 function selectReceiveMessage(event){
     event.preventDefault();
+    
   if (buttonAfirmation.checked) {
     heartIcon.classList.remove("hidden")
-    viewFavoriteMessagesPage.classList.remove("hidden")
+    buttonViewFavorites.classList.remove(".hidden")
+    viewFavoriteControls.classList.remove("hidden");
     displayMessage.innerText =
     affirmations[Math.floor(Math.random() * affirmations.length)];
      
   } else if (buttonMantra.checked) {
     displayMessage.innerText =
       mantras[Math.floor(Math.random() * mantras.length)];
-      heartIcon.classList.remove("hidden");
-      viewFavoriteMessagesPage.classList.remove("hidden")
+    viewFavoriteControls.classList.remove("hidden");
   }
 }
 
 function addToFavorites(){
     favoriteMessages.push(displayMessage.innerText)
-    viewFavoriteMessagesPage.classList.remove("hidden");
 }
 
 function showFavoriteList(){
-    displayMessage.innerText = favoriteMessages
-    viewFavoriteMessagesPage.classList.remove("hidden");
+    homeView.classList.add("hidden")
+    favoriteMessageContainer.classList.remove("hidden")
+}
+
+function saveFavoritePage(){
+  favoriteMessageContainer.innerText =
+  for (var i = 0; i <favoriteMessages.length; i++) {
+    favoriteMessageContainer.innerText += `favoriteMessages[i]`
+  }
 }

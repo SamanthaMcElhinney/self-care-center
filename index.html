@@ -1,39 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <title>Self Care App</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
+
   <body>
-    <header> <h2>✨ Self Care Center ✨ </h2>
+    <header>
+      <h2>✨ Self Care Center ✨ </h2>
     </header>
-    <section class="Question">
-      <h3> Which type of message? </h3>
-    </section>
-    <form class="Affiration-Mantra-Box">
-      <div class="radio-button-box">
-        <input type="radio" id="button1-Affirmation" name="radiobutton" value = "affirmation">
-        <label for="radio1">affirmation</label>
-        <input type="radio" id="button2-Mantra" name="radiobutton" value = "mantra">
-        <label for="radio2">mantra</label>
-      </div> 
+    <section class="main-screen">
+      <section class="Question">
+        <h3> Which type of message? </h3>
+      </section>
+      <form class="Affiration-Mantra-Box">
+        <div class="radio-button-box">
+          <input type="radio" id="button1-Affirmation" name="radiobutton" value="affirmation">
+          <label for="radio1">affirmation</label>
+          <input type="radio" id="button2-Mantra" name="radiobutton" value="mantra">
+          <label for="radio2">mantra</label>
+        </div>
         <br>
         <br>
         <button id="receive-message-Butn">Receive Message</button>
-    </form>
-    <section class="Meditation-box">
-      <img id= "Buddha hidden" src="assets/meditate.svg" alt="Meditation icon"/>
-    </section>
-     <section class ="viewfavorites hidden">
+      </form>
+      <section class="Meditation-box">
+        <img id="Buddha" src="assets/meditate.svg" alt="Meditation icon" />
+      </section>
+      <section class="viewfavorites hidden">
         <button class="favorites-button">Favorites</button>
         <button class="heart">&#9825</button>
-     </section>
-    <div class = "liked button">
-      	<h3>&#9825</h3> 
-    </div> 
-</label>
+      </section>
+      <div class="liked button">
+        <h3>&#9825</h3>
+      </div>
+    </section>
+    <section class="parent-favorite-message-container hidden" id="favorite-message-container">
+      <button>
+        <id="home-button">Home Page</id>
+      </button>
+      <p class = "favorite-message-box">
+      </p>
+    </section>
     <script type="text/javascript" src="main.js"></script>
   </body>
+
 </html>
