@@ -13,7 +13,12 @@ black - #000000;
       }
 
       .hidden {
-        visibility: hidden;
+        display: none;
+      }
+
+      .btn {
+        padding: 12px 16px;
+        font-size:16px;
       }
 
       header {

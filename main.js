@@ -36,13 +36,17 @@ var displayMessage = document.querySelector('.Meditation-box')
 var buddhaIcon = document.querySelector('#Buddha')
 var randomMantra = mantras[Math.floor(Math.random() * mantras.length)]
 var randomAffirmation = affirmations[Math.floor(Math.random() * affirmations.length)]
-var heartIcon = document.querySelector(".heart-icon");
+var viewFavoriteMessagesPage = document.querySelector('.viewfavorites')
+var buttonViewFavorites = document.querySelector(".favorites-button")
+var heartIcon = document.querySelector('.heart')
+
+var favoriteMessages = [];
 
 buttonReceiveMessage.addEventListener("click", selectReceiveMessage);
-window.addEventListener("load", displayPage)
-heartIcon.addEventListener("click", addToFavorites)
+heartIcon.addEventListener("click", addToFavorites);
+buttonViewFavorites.addEventListener("click", showFavoriteList)
 
-function getRandomIndex(array) {
+function displayRandomMessage(array) {
   return Math.floor(Math.random() * array.length);
 }
 
@@ -54,16 +58,24 @@ function selectReceiveMessage(event){
     event.preventDefault();
   if (buttonAfirmation.checked) {
     heartIcon.classList.remove("hidden")
+    viewFavoriteMessagesPage.classList.remove("hidden")
     displayMessage.innerText =
-      affirmations[Math.floor(Math.random() * affirmations.length)];
+    affirmations[Math.floor(Math.random() * affirmations.length)];
      
   } else if (buttonMantra.checked) {
-        displayMessage.innerText =
+    displayMessage.innerText =
       mantras[Math.floor(Math.random() * mantras.length)];
       heartIcon.classList.remove("hidden");
+      viewFavoriteMessagesPage.classList.remove("hidden")
   }
 }
 
 function addToFavorites(){
-    
+    favoriteMessages.push(displayMessage.innerText)
+    viewFavoriteMessagesPage.classList.remove("hidden");
+}
+
+function showFavoriteList(){
+    displayMessage.innerText = favoriteMessages
+    viewFavoriteMessagesPage.classList.remove("hidden");
 }
