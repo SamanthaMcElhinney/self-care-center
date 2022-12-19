@@ -1,51 +1,22 @@
 # Self Care Center
-## Overview
-How can I care for myself? One way is with affirmations and mantras!
-Affirmations are thoughts of positive self-empowerment, meant to assert your self-worth.
-Mantras are repetive phrases that are repeated again and again during mindfulness practices. Your challenge is to build an app that helps users remind themselves of their inherent value!
-
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
-
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/self-care-center.html). 
-
-## Learning Goals
-
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
-
-## Setup
-
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
-
-______________________________________________________  
-# README Template  
-Before turning this project in, erase this line and everything above it and fill in the info below.  
-______________________________________________________  
-
-# Self-Care Center 
 
 ### Abstract:
-[//This project]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
-
+I created a self care app that generates random mantras and affirmations with selecting a receive message feature. This app allows users to select and add their favorite messages and display them in an individualized page that they can reference for future use. This app is meant to be a self-help tool that can be personalized for inspirational ideas.
+ 
 ### Installation Instructions:
-[//]: <> (What steps does a person have to take to get your app cloned down and running?)
-
+A user needs to git clone the repo to their local browser. Then they should be able to open the application in visual studio code or whichever editor they are using.
+ 
 ### Preview of App:
-[//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
-
+I added the saved mantras/affirmations page. This is a very useful feature for the user to reference their favorite messages.
+ 
 ### Context:
-[//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
-
+I had to work on this project for approximately 25 hours. I am in my third week of coding. I completed all parts independently for this project.
+ 
 ### Contributors:
-[//]: <> (Who worked on this application? Link to their GitHubs.)
-
+I was the only creator for this application
+ 
 ### Learning Goals:
-[//]: <> (What were the learning goals of this project? What tech did you work with?)
-
+The learning goals of this project was to utilize HTML, CSS and Javascript for creating a self care application. I gained more experience with CSS and HTML, matching the styling content of the intended page. This project was further meant to develop my understanding of using the DOM, data types, and javascript, along with further gaining knowledge for personalized features.
+ 
 ### Wins + Challenges:
-[//]: <> (What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
+A big win was being able to complete the majority of the project independently, prior to needing to reach out for help, due to unproductive struggle with the final challenge to delete messages from a saved page. I was unable to finish this despite nearly 4 hours spent on this one feature with assistance with a classmate for troubleshooting. I still have a lot of work to go with CSS and HTML; however, I was able to utilize dev tools and flex-box some in my project. To overcome problems I reviewed notes, researched MD, pseudocoded, watched youTube videos, and used dev tools/ console log with attempts to find where the code was breaking.
