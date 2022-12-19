@@ -39,14 +39,16 @@ var randomAffirmation = affirmations[Math.floor(Math.random() * affirmations.len
 var viewFavoriteControls = document.querySelector('.viewfavorites')
 var buttonViewFavorites = document.querySelector(".favorites-button")
 var heartIcon = document.querySelector('.heart')
-var favoriteMessageContainer = document.querySelector('#favorite-message-container')
-var favoriteMessageBox = document.querySelector(".favorite-message-box");
+var favoriteMessageContainer = document.querySelector('.parent-favorite-message-container')
+var favoriteMessageP = document.querySelector("#favorite-message-container-P");
 
 var favoriteMessages = [];
 
 buttonReceiveMessage.addEventListener("click", selectReceiveMessage);
 heartIcon.addEventListener("click", addToFavorites);
 buttonViewFavorites.addEventListener("click", showFavoriteList)
+
+
 
 function displayRandomMessage(array) {
   return Math.floor(Math.random() * array.length);
@@ -56,8 +58,6 @@ function selectReceiveMessage(event){
     event.preventDefault();
     
   if (buttonAfirmation.checked) {
-    heartIcon.classList.remove("hidden")
-    buttonViewFavorites.classList.remove(".hidden")
     viewFavoriteControls.classList.remove("hidden");
     displayMessage.innerText =
     affirmations[Math.floor(Math.random() * affirmations.length)];
@@ -76,11 +76,7 @@ function addToFavorites(){
 function showFavoriteList(){
     homeView.classList.add("hidden")
     favoriteMessageContainer.classList.remove("hidden")
-}
-
-function saveFavoritePage(){
-  favoriteMessageContainer.innerText =
-  for (var i = 0; i <favoriteMessages.length; i++) {
-    favoriteMessageContainer.innerText += `favoriteMessages[i]`
+      for (var i = 0; i <favoriteMessages.length; i++) {
+      favoriteMessageP.innerHTML += ` ${favoriteMessages[i]} 🖤`;
   }
 }
