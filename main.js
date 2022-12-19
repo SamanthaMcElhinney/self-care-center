@@ -47,14 +47,13 @@ var favoriteMessageP = document.querySelector("#favorite-message-container-P");
 var buttonHome = document.querySelector("#home-button");
 var buttonDelete = document.querySelector("#delete-icon");
 var currentMessage = [];
-
 var favoriteMessages = [];
 
 buttonReceiveMessage.addEventListener("click", selectReceiveMessage);
 heartIcon.addEventListener("click", addToFavorites);
 buttonViewFavorites.addEventListener("click", showFavoriteList);
 buttonHome.addEventListener("click", takeToHomePage);
-buttonDelete.addEventListener("click", deleteSavedMessage);
+buttonDelete.addEventListener("dblclick", deleteSavedMessage);
 
 function displayRandomMessage(array) {
   return Math.floor(Math.random() * array.length);
@@ -83,7 +82,7 @@ function showFavoriteList() {
   favoriteMessageContainer.classList.remove("hidden");
   for (var i = 0; i < favoriteMessages.length; i++) {
     favoriteMessageP.innerHTML += `<p>
-      ${favoriteMessages[i]} 🖤</p>
+      ${favoriteMessages[i]} 🖤 </p>
       <button id="delete-icon">
       </button>`;
   }
@@ -96,10 +95,3 @@ function takeToHomePage() {
   favoriteMessageP.classList.remove("hidden");
 }
 
-function deleteSavedMessage() {
-  console.log('hi')
-  console.log(event.target.getAttribute('id'))
-  // for (var i = 0; i < favoriteMessages.length; i++) {
-  //   favoriteMessages.splice(i, 1);
-  // }
-}
