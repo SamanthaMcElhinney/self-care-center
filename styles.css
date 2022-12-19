@@ -16,11 +16,6 @@ black - #000000;
         display: none;
       }
 
-      .btn {
-        padding: 12px 16px;
-        font-size:16px;
-      }
-
       header {
         text-align: center;
         font-family: 'Quicksand', sans-serif;
@@ -29,7 +24,7 @@ black - #000000;
         padding-bottom: 50px;
       }
 
-      h3{
+      h3 {
         text-align: center;
         font-family: 'Quicksand';
         color:  #ffffff;
@@ -66,16 +61,6 @@ black - #000000;
         padding-right:70px
       }
 
-      .radio1{
-        padding-right: 70px;
-      }
-
-      .radio2 {
-        font-family: 'Quicksand';
-        float: left;
-        padding-right: 70px;
-      }
-
       #button2-Mantra {
         font-family: 'Quicksand';
         float: left;
@@ -104,34 +89,36 @@ black - #000000;
         display: flex;
         flex-direction: row;
         justify-content: center; 
+        align-items: center;
+      }
+
+      .viewfavorites {
+        margin:auto;
+        border-radius:10px 10px 10px 10px;
+        width: 150px;
+        height: 75px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center; 
         align-items:center;
       }
 
-   
-      
-
-      img {
+     img {
         margin: 0 auto;
-        display: inline;
         border: 1px solid #ddd;
         border-radius: 4px;
         padding: 5px;
         width: 50px;
         height: 50px;
+        flex-direction: row;
+        justify-content: center; 
+        align-items: center;
       }
 
       #heartImg{
         margin-top:-800px;
         margin-left:250px;
         margin-bottom:30px
-      }
-
-      .parent {
-        background-color: #78a7c6;
-        width:100px;
-        height:100px;
-        justify-content: center;
-        align-items:center;
       }
 
       p {
@@ -148,11 +135,4 @@ black - #000000;
       }
 
     
-      /* label {
-        width: 25px;
-        background-color: white;
-        display: flex;
-        align-items: center;
-        padding:10px 15px 10 px 10 px;
-        cursor:pointer;
-      } */
+  
