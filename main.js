@@ -29,7 +29,7 @@ var mantras = [
   "The only constant is change.",
 ];
 var homeView = document.querySelector(".main-screen");
-var buttonAfirmation = document.querySelector("#button1-Affirmation");
+var buttonAffirmation = document.querySelector("#button1-Affirmation");
 var buttonMantra = document.querySelector("#button2-Mantra");
 var buttonReceiveMessage = document.querySelector("#receive-message-Butn");
 var displayMessage = document.querySelector(".Meditation-box");
@@ -45,7 +45,7 @@ var favoriteMessageContainer = document.querySelector(
 );
 var favoriteMessageP = document.querySelector("#favorite-message-container-P");
 var buttonHome = document.querySelector("#home-button");
-var buttonDelete = document.querySelector("#delete-icon");
+// var buttonDelete = document.querySelector(".delete-icon");
 var currentMessage = [];
 var favoriteMessages = [];
 
@@ -53,7 +53,7 @@ buttonReceiveMessage.addEventListener("click", selectReceiveMessage);
 heartIcon.addEventListener("click", addToFavorites);
 buttonViewFavorites.addEventListener("click", showFavoriteList);
 buttonHome.addEventListener("click", takeToHomePage);
-buttonDelete.addEventListener("dblclick", deleteSavedMessage);
+// buttonDelete.addEventListener("click", deleteSavedMessage);
 
 function displayRandomMessage(array) {
   return Math.floor(Math.random() * array.length);
@@ -61,7 +61,7 @@ function displayRandomMessage(array) {
 
 function selectReceiveMessage(event) {
   event.preventDefault();
-  if (buttonAfirmation.checked) {
+  if (buttonAffirmation.checked) {
     viewFavoriteControls.classList.remove("hidden");
     buddhaIcon.classList.add("hidden");
     displayMessage.innerText =
@@ -81,10 +81,10 @@ function showFavoriteList() {
   homeView.classList.add("hidden");
   favoriteMessageContainer.classList.remove("hidden");
   for (var i = 0; i < favoriteMessages.length; i++) {
-    favoriteMessageP.innerHTML += `<p>
+    favoriteMessageP.innerHTML += `<div class="favorite-message-card" id=${[i]}><p>
       ${favoriteMessages[i]} 🖤 </p>
-      <button id="delete-icon">
-      </button>`;
+      <button class="delete-icon" onclick = "deleteSavedMessage(${[i]})"> Delete
+      </button></div>`;
   }
 }
 
@@ -95,3 +95,13 @@ function takeToHomePage() {
   favoriteMessageP.classList.remove("hidden");
 }
 
+function deleteSavedMessage() {
+  favoriteMessages.splice([i], 1)
+}
+
+  // console.log(id)
+  // // document.getElementById(id)
+  
+  // favoriteMessages.splice(id, 1)
+  // console.log(favoriteMessages)
+// };
