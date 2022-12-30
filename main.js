@@ -2,7 +2,7 @@ var affirmations = [
   "I forgive myself and set myself free.",
   "I believe I can be all that I want to be.",
   "I am in the process of becoming the best version of myself.",
-  "I have the freedom & power to create the life I desire.",
+  "I have the freedom and power to create the life I desire.",
   "I choose to be kind to myself and love myself unconditionally.",
   "My possibilities are endless.",
   "I am worthy of my dreams.",
@@ -15,7 +15,7 @@ var affirmations = [
 ];
 var mantras = [
   "Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.",
-  "Don’t let yesterday take up too much of today.",
+  "Do not let yesterday take up too much of today.",
   "Every day is a second chance.",
   "Tell the truth and love everyone.",
   "I am free from sadness.",
@@ -82,9 +82,20 @@ function showFavoriteList() {
   favoriteMessageContainer.classList.remove("hidden");
   for (var i = 0; i < favoriteMessages.length; i++) {
     favoriteMessageP.innerHTML += `<div class="favorite-message-card" id=${[i]}><p>
-      ${favoriteMessages[i]} 🖤 </p>
-      <button class="delete-icon" onclick = "deleteSavedMessage(${[i]})"> Delete
-      </button></div>`;
+      ${favoriteMessages[i]} </p>
+      <button class="delete-icon">
+      delete </button></div>` 
+      assignDeleteButton()
+      //  <input type = "checkbox">
+      //  <button class="delete-icon" onclick = "deleteSavedMessage(${[i]})"> Delete
+      //  </button></div>`;
+  }
+}
+
+function assignDeleteButton(){
+  var deleteButtons = document.querySelectorAll(".delete-icon");
+  for (var i = 0; i < deleteButtons.length; i ++) {
+    deleteButtons[i].addEventListener('click', deleteSavedMessage)
   }
 }
 
@@ -95,10 +106,20 @@ function takeToHomePage() {
   favoriteMessageP.classList.remove("hidden");
 }
 
-function deleteSavedMessage() {
-  favoriteMessages.splice([i], 1)
+function deleteSavedMessage(event) {
+  for (var i = 0; i < favoriteMessages.length; i++) {
+    console.log(findMessage(event))
+    if (findMessage(event) === favoriteMessages[i]) {
+      console.log('Lets go')
+      favoriteMessages.splice(i, 1)
+    }
+  }
 }
 
+function findMessage(event){
+   return event.target.parentElement.firstElementChild.innerHTML
+}
+// }
   // console.log(id)
   // // document.getElementById(id)
   
