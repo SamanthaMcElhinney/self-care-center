@@ -45,7 +45,6 @@ var favoriteMessageContainer = document.querySelector(
 );
 var favoriteMessageP = document.querySelector("#favorite-message-container-P");
 var buttonHome = document.querySelector("#home-button");
-// var buttonDelete = document.querySelector(".delete-icon");
 var currentMessage = [];
 var favoriteMessages = [];
 
@@ -53,7 +52,6 @@ buttonReceiveMessage.addEventListener("click", selectReceiveMessage);
 heartIcon.addEventListener("click", addToFavorites);
 buttonViewFavorites.addEventListener("click", showFavoriteList);
 buttonHome.addEventListener("click", takeToHomePage);
-// buttonDelete.addEventListener("click", deleteSavedMessage);
 
 function displayRandomMessage(array) {
   return Math.floor(Math.random() * array.length);
@@ -80,15 +78,12 @@ function addToFavorites() {
 function showFavoriteList() {
   homeView.classList.add("hidden");
   favoriteMessageContainer.classList.remove("hidden");
+  favoriteMessageP.innerHTML = ''
   for (var i = 0; i < favoriteMessages.length; i++) {
-    favoriteMessageP.innerHTML += `<div class="favorite-message-card" id=${[i]}><p>
-      ${favoriteMessages[i]} </p>
+    favoriteMessageP.innerHTML += `<div class="favorite-message-card" id=${[i]}><p>${favoriteMessages[i]}</p>
       <button class="delete-icon">
       delete </button></div>` 
       assignDeleteButton()
-      //  <input type = "checkbox">
-      //  <button class="delete-icon" onclick = "deleteSavedMessage(${[i]})"> Delete
-      //  </button></div>`;
   }
 }
 
@@ -112,17 +107,11 @@ function deleteSavedMessage(event) {
     if (findMessage(event) === favoriteMessages[i]) {
       console.log('Lets go')
       favoriteMessages.splice(i, 1)
+      showFavoriteList()
     }
   }
 }
 
 function findMessage(event){
-   return event.target.parentElement.firstElementChild.innerHTML
+   return event.target.parentElement.firstElementChild.innerText
 }
-// }
-  // console.log(id)
-  // // document.getElementById(id)
-  
-  // favoriteMessages.splice(id, 1)
-  // console.log(favoriteMessages)
-// };
